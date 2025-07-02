@@ -280,3 +280,87 @@ body {
 .message-modal .close-btn:hover {
   opacity: 1;
 }
+
+/* Estilos específicos para Me Lembre! */
+.lembrete-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.lembrete-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.lembrete-card .card-body {
+  padding: 1rem;
+}
+
+/* Cores das bordas por prioridade */
+.lembrete-card[data-prioridade="Baixa"] {
+  border-left-color: #28a745;
+}
+
+.lembrete-card[data-prioridade="Normal"] {
+  border-left-color: #007bff;
+}
+
+.lembrete-card[data-prioridade="Alta"] {
+  border-left-color: #ffc107;
+}
+
+.lembrete-card[data-prioridade="Urgente"] {
+  border-left-color: #dc3545;
+}
+
+/* Animação para estatísticas */
+.card .fa-2x {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .fa-2x {
+  transform: scale(1.1);
+}
+
+/* Estilos para badges de categoria */
+.badge.bg-light {
+  color: #495057 !important;
+  border: 1px solid #dee2e6;
+}
+
+/* Responsividade para Me Lembre! */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .card-body .d-flex.gap-1 {
+    flex-wrap: wrap;
+  }
+  
+  .pagination-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Estilos para notificações */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
